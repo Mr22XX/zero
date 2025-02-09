@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero || Sign Up </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    .font1 {
+  font-family: "Chelsea Market", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+    @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+</style>
+<body>
+    <div class="h-screen w-full" >
+        <nav class="h-[10%] w-full p-4 flex justify-between bg-slate-800 drop-shadow-lg  shadow-slate-500">
+            <div class="flex items-center p-4">
+                <h1 class="font1 text-3xl text-purple-600">Zero</h1>
+            </div>
+        </nav>
+
+        <main class="h-[90%] w-full flex justify-center items-center bg-slate-900">
+            <div class="flex justify-center items-center rounded-lg text-white w-[29rem]  h-[95%]  border-2 border-white">
+                <div  class="flex flex-col w-full p-6 ">
+                    <h3 class="text-2xl font-bold text-center">Sign Up</h3>
+                    <div class="flex flex-col gap-8">
+                        <div class="flex flex-col pt-1 ">
+                            <label for="email">Email</label>
+                            <input type="email" class="email p-1 mt-2 rounded-lg text-black">
+                        </div>
+                        <div class="flex flex-col pt-1 ">
+                            <label for="username">Username</label>
+                            <input type="text" class="username p-1 mt-2 rounded-lg text-black">
+                        </div>
+                        <div class="flex flex-col pt-1 ">
+                            <label for="telp">Phone Number</label>
+                            <input type="text" class="telp p-1 mt-2 rounded-lg text-black">
+                        </div>
+                        <div class="flex flex-col pt-1">
+                            <label for="password">Password</label>
+                            <input type="password" class="pw p-1 mt-2 rounded-lg text-black">
+                        </div>
+                        <div class="flex flex-col pt-1">
+                            <p> have an account ? <span class="underline"><a href="index.html">Sign In Here !</a></span> </p>
+                        </div>
+                        <div class="flex flex-col p-1 rounded-lg bg-purple-600 ">
+                           <button class="font-bold" onclick="signUp()" >Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const signUp = () =>{
+            const email = document.querySelector('.email').value
+            const username = document.querySelector('.username').value
+            const phone = document.querySelector('.telp').value
+            const pw = document.querySelector('.pw').value
+
+            if(email == '' || username == '' || phone == '' || pw == ''){
+                alert('Data tidak boleh kosong')
+                return;
+            }else{
+                alert('sign up Berhasil ! Silahkan Login')
+                window.location.href = 'index.html'
+            }
+        } 
+    </script>
+
+</body>
+</html>

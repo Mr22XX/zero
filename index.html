@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero || Sign In </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    .font1 {
+  font-family: "Chelsea Market", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+    @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+</style>
+<body>
+    <div class="h-screen w-full" >
+        <nav class="h-[10%] w-full p-4 flex justify-between bg-slate-800 drop-shadow-lg  shadow-slate-500">
+            <div class="flex items-center p-4">
+                <h1 class="font1 text-3xl text-purple-600">Zero</h1>
+            </div>
+            
+        </nav>
+
+        <main class="h-[90%] w-full flex justify-center items-center bg-slate-900">
+            <div class="flex justify-center items-center rounded-lg text-white w-[29rem] m-10 h-[70%] border-2 border-white">
+                <div  class="flex flex-col w-full p-6">
+                    <h3 class="text-2xl font-bold text-center">Sign In</h3>
+                    <div class="flex flex-col gap-8">
+                        <div class="flex flex-col pt-4 ">
+                            <label for="email">Email</label>
+                            <input type="email" class="email p-1 mt-2 rounded-lg text-black" required placeholder="Email">
+                        </div>
+                        <div class="flex flex-col pt-4">
+                            <label for="password">Password</label>
+                            <input type="password" class="pw p-1 mt-2 rounded-lg text-black" required placeholder="Password">
+                        </div>
+                        <div class="flex flex-col pt-4">
+                            <p>Don't have an account ? <span class="underline"><a href="signup.html">Sign Up Here !</a></span> </p>
+                        </div>
+                        <div class="flex flex-col p-1 rounded-lg bg-purple-600 ">
+                           <button class="font-bold" onclick="logIn()">Log In</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        const logIn = () =>{
+            const email = document.querySelector('.email').value
+            const pw = document.querySelector('.pw').value
+            if(email == '' || pw == ''){
+                alert('Email dan Password tidak boleh kosong')
+                return;
+            }else{
+                alert('login berhasil !')
+                window.location.href = 'dashboard.html'
+            }
+        }
+    </script>
+</body>
+</html>
